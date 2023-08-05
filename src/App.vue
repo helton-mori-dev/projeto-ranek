@@ -2,7 +2,9 @@
   <div id="app">
     <TheHeader />
     <main id="main">
-      <router-view />
+      <transition mode="out-in">
+        <router-view />
+      </transition>
     </main>
     <TheFooter />
   </div>
@@ -20,36 +22,40 @@ export default {
 };
 </script>
 
+
 <style>
 * {
   box-sizing: border-box;
 }
+
 body,
 ul,
 li,
 h1,
 h2,
 p {
-  margin: 0;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
 }
+
 ul {
   list-style: none;
 }
-img {
-  max-width: 100%;
-  display: block;
-}
+
 body {
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #345;
-  background: url(./assets/pattern.svg) repeat top;
+  background: url("./assets/pattern.svg") repeat top;
 }
 
 a {
   color: #345;
-  list-style: none;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .btn {
@@ -60,9 +66,10 @@ a {
   color: #fff;
   text-align: center;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(30, 60 90, 0.2);
-  transition: 0.3s all ease;
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  transition: all 0.3s;
+  border: none;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   cursor: pointer;
 }
 
@@ -73,23 +80,27 @@ a {
 
 #app {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 #main {
   flex: 1;
 }
 
+label {
+  margin-bottom: 5px;
+}
+
 input,
 textarea {
   border-radius: 4px;
-  border: none;
+  border: 1px solid white;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
-  transition: 0.3s all;
+  transition: all 0.3s;
   font-size: 1rem;
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   margin-bottom: 15px;
 }
 
@@ -98,8 +109,8 @@ input:focus,
 textarea:hover,
 textarea:focus {
   outline: none;
-  box-shadow: 0 6px 12px rgba(30, 60 90, 0.2);
-  border-color: #867;
+  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+  border-color: #87f;
 }
 
 .v-enter,
@@ -107,16 +118,16 @@ textarea:focus {
   opacity: 0;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: 0.3s all ease;
-}
-
 .v-enter {
-  transform: translate3d(0, -60px, 0);
+  transform: translate3d(0, -20px, 0);
 }
 
 .v-leave-to {
-  transform: translate(0, 0, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
 }
 </style>
