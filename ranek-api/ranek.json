@@ -10,7 +10,8 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
-    },    {
+    },
+    {
       "id": "joao@origamid.com",
       "email": "joao@origamid.com",
       "nome": "João",
@@ -20,6 +21,42 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "heltonmori@gmail.com",
+      "nome": "Helton Mori",
+      "email": "heltonmori@gmail.com",
+      "senha": "123",
+      "cep": "86050-500",
+      "rua": "Rua Weslley César Vanzo",
+      "numero": "189",
+      "bairro": "Gleba Fazenda Palhano",
+      "cidade": "Londrina",
+      "estado": "PR"
+    },
+    {
+      "id": "heltonmori2@gmail.com",
+      "nome": "Helton1",
+      "email": "heltonmori2@gmail.com",
+      "senha": "658",
+      "cep": "86050-500",
+      "rua": "Rua Weslley César Vanzo",
+      "numero": "189",
+      "bairro": "Gleba Fazenda Palhano",
+      "cidade": "Londrina",
+      "estado": "PR"
+    },
+    {
+      "id": "heltonmori3@gmail.com",
+      "nome": "Helton Mori",
+      "email": "heltonmori3@gmail.com",
+      "senha": "987",
+      "cep": "86050-500",
+      "rua": "Rua Weslley César Vanzo",
+      "numero": "189",
+      "bairro": "Gleba Fazenda Palhano",
+      "cidade": "Londrina",
+      "estado": "PR"
     }
   ],
   "produto": [
