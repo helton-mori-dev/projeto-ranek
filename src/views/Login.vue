@@ -5,7 +5,7 @@
       <label for="email">Email</label>
       <input type="email" nome="email" id="email" v-model="login.email" />
       <label for="senha">Senha</label>
-      <input type="senha" nome="senha" id="senha" v-model="login.email" />
+      <input type="senha" nome="senha" id="senha" v-model="login.senha" />
       <button class="btn" @click.prevent="logar">Logar</button>
     </form>
     <p class="perdeu"><a href="/">Perdeu a senha?</a></p>
@@ -28,7 +28,10 @@ export default {
     LoginCriar,
   },
   methods: {
-    logar() {},
+    logar() {
+      this.$store.dispatch("getUsuario", this.login.email);
+      this.$router.push({ name: "Usuario" });
+    },
   },
 };
 </script>
