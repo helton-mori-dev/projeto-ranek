@@ -37,7 +37,7 @@ export default {
         );
         this.$router.push({ name: "usuario" });
       } catch {
-        console.log(error);
+        // console.log(error);
       }
     },
   },
