@@ -511,6 +511,14 @@
       "fotos": null,
       "usuario_id": "maria@origamid.com",
       "id": "3reAOZl"
+    },
+    {
+      "nome": "Garrafa",
+      "preco": "5",
+      "descricao": "teste",
+      "fotos": null,
+      "usuario_id": "andre@origamid.com",
+      "id": "lGW22Co"
     }
   ]
 }
