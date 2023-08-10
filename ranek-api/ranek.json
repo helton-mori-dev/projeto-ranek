@@ -2,14 +2,15 @@
   "usuario": [
     {
       "id": "andre@origamid.com",
-      "email": "andre@origamid.com",
-      "nome": "André Rafael",
+      "nome": "Helton Mori",
+      "email": "heltonmori@gmail.com",
       "senha": "123",
-      "rua": "Rua Ali Perto",
-      "cep": "12345678",
-      "numero": "25",
-      "estado": "RJ",
-      "cidade": "Rio de Janeiro"
+      "cep": "86050-500",
+      "rua": "Rua Weslley César Vanzo",
+      "numero": "189",
+      "bairro": "Gleba Fazenda Palhano",
+      "cidade": "Londrina",
+      "estado": "PR"
     },
     {
       "id": "joao@origamid.com",
