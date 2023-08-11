@@ -1,4 +1,72 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "andre@origamid.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "andre@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "12345678",
+        "rua": "Rua Ali Perto",
+        "numero": "150",
+        "bairro": "Esse Mesmo",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "teste@gmail.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "andre@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "22020-001",
+        "rua": "Avenida Nossa Senhora de Copacabana",
+        "numero": "99",
+        "bairro": "Copacabana",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 2
+    },
+    {
+      "comprador_id": "heltonmori@gmail.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "andre@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "86050-500",
+        "rua": "Rua Weslley César Vanzo",
+        "numero": "189",
+        "bairro": "Gleba Fazenda Palhano",
+        "cidade": "Londrina",
+        "estado": "PR"
+      },
+      "id": 3
+    }
+  ],
   "usuario": [
     {
       "id": "andre@origamid.com",
