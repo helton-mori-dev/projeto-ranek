@@ -1,8 +1,21 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:3000"
+    baseURL: "http://ranekapilocal.local/wp-json/api"
 })
+
+axiosInstance.interceptors.request.use(
+    function (config) {
+        const token = localStorage.token
+        if (token) {
+            config.headers.Authorization = token
+        }
+        return config
+    },
+    function (error) {
+        return Promise.reject(error)
+    }
+)
 export const api = {
     get(endpoint) {
         return axiosInstance.get(endpoint)
@@ -16,6 +29,12 @@ export const api = {
     put(endpoint, body) {
         return axiosInstance.put(endpoint, body)
     },
+    login(body) {
+        return axios.post("http://ranekapilocal.local/wp-json/jwt-auth/v1/token", body)
+    },
+    validateToken() {
+        return axios.post("http://ranekapilocal.local/wp-json/jwt-auth/v1/token/validate")
+    }
 }
 
 export function getCep(cep) {
