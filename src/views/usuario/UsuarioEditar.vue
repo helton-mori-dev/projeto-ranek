@@ -25,9 +25,7 @@ export default {
           this.$store.dispatch("getUsuario");
           this.$router.push({ name: "usuario" });
         })
-        .catch((error) => {
-          console.log(error.response);
-        });
+        .catch(() => {});
     },
   },
 };

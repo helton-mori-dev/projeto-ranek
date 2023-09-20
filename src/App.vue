@@ -13,11 +13,24 @@
 <script>
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeader from "@/components/TheHeader.vue";
+import { api } from "@/services.js";
 
 export default {
   components: {
     TheHeader,
     TheFooter,
+  },
+  created() {
+    if (localStorage.token) {
+      api
+        .validateToken()
+        .then(() => {
+          this.$store.dispatch("getUsuario");
+        })
+        .catch((error) => {
+          localStorage.removeItem("token");
+        });
+    }
   },
 };
 </script>
