@@ -7,13 +7,19 @@
       <label for="senha">Senha</label>
       <input type="senha" nome="senha" id="senha" v-model="login.senha" />
       <button class="btn" @click.prevent="logar">Logar</button>
+      <ErroNotificacao :erros="erros"></ErroNotificacao>
     </form>
-    <p class="perdeu"><a href="/">Perdeu a senha?</a></p>
+    <p class="perdeu">
+      <a href="http://ranekapilocal.local/wp-login.php?action=lostpassword"
+        >Perdeu a senha?</a
+      >
+    </p>
     <LoginCriar></LoginCriar>
   </section>
 </template>
 <script>
 import LoginCriar from "@/components/LoginCriar.vue";
+import ErroNotificacao from "../components/ErroNotificacao.vue";
 export default {
   name: "Login",
   data() {
@@ -22,17 +28,25 @@ export default {
         email: "",
         senha: "",
       },
+      erros: [],
     };
   },
   components: {
     LoginCriar,
+    ErroNotificacao,
   },
   methods: {
     logar() {
-      this.$store.dispatch("logarUsuario", this.login).then(() => {
-        this.$store.dispatch("getUsuario");
-        this.$router.push({ name: "Usuario" });
-      });
+      this.erros = [];
+      this.$store
+        .dispatch("logarUsuario", this.login)
+        .then(() => {
+          this.$store.dispatch("getUsuario");
+          this.$router.push({ name: "Usuario" });
+        })
+        .catch((erro) => {
+          this.erros.push(erro.response.data.message);
+        });
     },
   },
 };
