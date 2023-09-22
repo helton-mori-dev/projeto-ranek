@@ -38,7 +38,7 @@ export default {
         await this.$store.dispatch("getUsuario");
         await this.criarTransacao();
         this.$router.push({ name: "usuario" });
-      } catch {
+      } catch (erro) {
         this.erros.push(erro.response.data.message);
       }
     },
