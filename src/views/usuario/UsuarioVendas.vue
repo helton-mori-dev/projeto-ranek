@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+    <PaginaCarregando v-else />
   </section>
 </template>
 
@@ -30,10 +31,12 @@
 import ProdutoItem from "@/components/ProdutoItem.vue";
 import { api } from "@/services.js";
 import { mapState } from "vuex";
+import PaginaCarregando from "../../components/PaginaCarregando.vue";
 
 export default {
   components: {
     ProdutoItem,
+    PaginaCarregando,
   },
   data() {
     return {
